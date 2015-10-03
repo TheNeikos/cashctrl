@@ -54,4 +54,5 @@ gem 'chartkick', '~> 1.4.1'
 gem 'ransack', '~> 1.7.0'
 gem 'will_paginate', '~> 3.0.5'
 gem 'acts_as_paranoid', '~> 0.5.0.beta'
+gem 'execjs', '~> 2.6.0'
 
