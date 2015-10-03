@@ -1,0 +1,13 @@
+%h1
+  User#show
+
+%p
+  Find me in app/views/user/show.html.erb
+
+- if logged_in?
+  %h2
+    You are logged in!
+- else
+  Please
+  = link_to "login", new_session_path
+
