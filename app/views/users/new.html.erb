@@ -1,0 +1,9 @@
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :email %>
+  <%= f.text_field :public_key %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>
+

@@ -1,0 +1,8 @@
+<h1>User#show</h1>
+<p>Find me in app/views/user/show.html.erb</p>
+
+<% if logged_in? %>
+  <h2>You are logged in!</h2>
+<% else %>
+  Please <%= link_to "login", new_session_path %>
+<% end%>

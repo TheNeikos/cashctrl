@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     @session = Session.new new_session_params
 
     if @session.save then
-      redirect_to :index
+      cookies[:session] = @session.cookie_hash
+      redirect_to @session.user
     else
       render :new
     end
