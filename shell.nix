@@ -6,6 +6,7 @@ let
     ruby_2_2_0
     zlib
     sqlite
+    nodejs
   ];
 in
 
