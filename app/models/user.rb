@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
 
+  has_many :ledgers
+
   validates :name, uniqueness: {lowercase: false}, presence: true
   validates :email, uniqueness: {lowercase: false}, presence: true
 
