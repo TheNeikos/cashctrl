@@ -7,4 +7,8 @@ class Ledger < ActiveRecord::Base
 
   validates :name, presence: true
 
+  def transactions
+    Transaction.where('sender_id = ? OR receiver_id = ?', id, id)
+  end
+
 end
