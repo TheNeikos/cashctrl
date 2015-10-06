@@ -26,3 +26,11 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+== License
+
+The source code of this project is published under the terms of the AGPL 3.0.
+For more information, have a look at the LICENSE file which is shipped with this
+code repository. Also, have a look
+{here, why we chose AGPL}[https://www.gnu.org/licenses/why-affero-gpl.en.html].
+
