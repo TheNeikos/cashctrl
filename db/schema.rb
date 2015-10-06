@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003164740) do
+ActiveRecord::Schema.define(version: 20151006162018) do
 
   create_table "ledgers", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "description"
-    t.decimal  "currency",    precision: 8, scale: 2
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.integer  "amount_cents",    default: 0,     null: false
+    t.string   "amount_currency", default: "EUR", null: false
   end
 
   add_index "ledgers", ["user_id"], name: "index_ledgers_on_user_id"
