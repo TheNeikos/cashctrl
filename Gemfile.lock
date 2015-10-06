@@ -215,6 +215,3 @@ DEPENDENCIES
   unread (~> 0.6.3)
   web-console (~> 2.0)
   will_paginate (~> 3.0.5)
-
-BUNDLED WITH
-   1.10.6
