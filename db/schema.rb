@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006162018) do
+ActiveRecord::Schema.define(version: 20151006182439) do
 
   create_table "ledgers", force: :cascade do |t|
     t.integer  "user_id"
@@ -33,6 +33,20 @@ ActiveRecord::Schema.define(version: 20151006162018) do
   end
 
   add_index "sessions", ["user_id"], name: "index_sessions_on_user_id"
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "receiver_id"
+    t.integer  "user_id"
+    t.integer  "amount_cents",    default: 0,     null: false
+    t.string   "amount_currency", default: "EUR", null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  add_index "transactions", ["receiver_id"], name: "index_transactions_on_receiver_id"
+  add_index "transactions", ["sender_id"], name: "index_transactions_on_sender_id"
+  add_index "transactions", ["user_id"], name: "index_transactions_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
