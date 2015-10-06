@@ -1,0 +1,5 @@
+%h2= @ledger.name
+
+%p
+  Money:
+  = humanized_money_with_symbol @ledger.amount
