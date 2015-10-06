@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @session.save then
       cookies[:session] = @session.cookie_hash
-      redirect_to @session.user
+      redirect_to session.delete(:after_login_action) { @session.user }
     else
       render :new
     end
