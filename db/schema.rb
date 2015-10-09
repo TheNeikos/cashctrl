@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006182439) do
+ActiveRecord::Schema.define(version: 20151009125529) do
 
   create_table "ledgers", force: :cascade do |t|
     t.integer  "user_id"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20151006182439) do
     t.string   "amount_currency", default: "EUR", null: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.text     "name"
+    t.text     "description"
   end
 
   add_index "transactions", ["receiver_id"], name: "index_transactions_on_receiver_id"
