@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :ledgers
+  resources :ledgers do
+    resources :transactions
+  end
 
   resources :users, only: [:new, :create, :show]
 

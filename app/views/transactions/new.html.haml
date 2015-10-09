@@ -1,0 +1,11 @@
+= form_for [@ledger,@transaction] do |f|
+  = f.text_field :name
+  = f.text_field :description
+  = f.text_field :sender_id
+  = f.text_field :receiver_id
+  = f.text_field :amount
+  = f.text_field :amount_currency
+  = f.submit
+
+= @transaction.errors.full_messages
+

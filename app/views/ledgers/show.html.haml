@@ -3,3 +3,14 @@
 %p
   Money:
   = humanized_money_with_symbol @ledger.amount
+
+%p
+  = link_to "New Transaction", new_ledger_transaction_path(@ledger)
+
+%ul
+  - @ledger.transactions.each do |tr|
+    %li
+      %strong= tr.name
+      %span= tr.amount
+      %span= if tr.sender == @ledger then "-> Out to" else "<- From " end
+      %span= if tr.sender == @ledger then tr.receiver.name else tr.sender.name end
