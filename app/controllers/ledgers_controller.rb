@@ -34,6 +34,6 @@ class LedgersController < ApplicationController
   private
 
   def new_ledger_params
-    params.require(:ledger).permit(:name, :description, :amount, :amount_currency)
+    params.require(:ledger).permit(:name, :description, :amount_currency)
   end
 end
