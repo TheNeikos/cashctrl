@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :ledgers do
-    resources :transactions
+  resources :users, only: [:new, :create, :show] do
+    resources :ledgers, shallow: true do
+      resources :transactions
+    end
   end
-
-  resources :users, only: [:new, :create, :show]
 
   resources :sessions, only: [:new, :create, :delete]
 

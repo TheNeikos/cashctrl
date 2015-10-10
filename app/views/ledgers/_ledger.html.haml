@@ -1,0 +1,22 @@
+%div{:class => "row"}
+
+  %div{:class => "small-10 medium-10 large-10 columns"}
+
+    %div{:class => "row"}
+      %div{:class => "small-5 medium-5 large-5 columns"}
+        = link_to ledger.name, ledger
+
+      %div{:class => "small-5 medium-5 large-5 columns text-right"}
+        = ledger.amount
+
+      %div{:class => "small-2 medium-2 large-2 columns"}
+        = ledger.amount_currency
+
+    %div{:class => "row"}
+      %div{:class => "small-12 medium-12 large-12 columns"}
+        <!-- Space for buttons like "New transaction and so on -->
+
+  %div{:class => "small-2 medium-2 large-2 columns"}
+    <!-- Space for buttons like "New transaction and so on -->
+
+

@@ -1,2 +1,9 @@
-%h1 Ledgers#index
-%p Find me in app/views/ledgers/index.html.haml
+%h1= current_user.name + ": Ledgers"
+
+%div{:class => "panel"}
+  <!-- Here go configurations for the ledgers to show -->
+
+%div{:class => "panel"}
+  - @ledgers.each do |l|
+    = render l
+
